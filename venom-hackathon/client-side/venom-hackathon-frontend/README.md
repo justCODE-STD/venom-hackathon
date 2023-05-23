@@ -24,6 +24,12 @@ This would route you to the directory.
 <li> To route to the react folder for frontend, you type
 
 ```
+cd client-side  
+```
+
+then
+
+```
 cd venom-hackathon-frontend
 ```
 
