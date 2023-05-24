@@ -1,5 +1,13 @@
 @import '../../App.scss';
 
 .pagebutton{
-    
+    width: $width;
+    margin-top: 5px;
+    padding: 15px;
+    border-radius: 10px; 
+    border: 1px solid #663399;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold;
 }
+

@@ -3,5 +3,14 @@
 input{
     position: relative;
     width: $width;
-    
+    margin-bottom: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+}
+
+::placeholder {
+    color: $color4;
 }
