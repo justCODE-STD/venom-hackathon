@@ -4,18 +4,19 @@
 .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 100vh;
     overflow: hidden;
 }
 
-.signupImg {
+.signinImg {
     height: auto;
     width: 100%;
     flex: 1;
     object-fit: cover;
 }
 
-.signupForm {
+.signinForm {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -25,9 +26,15 @@
     width: 100%;
 }
 
-.signupForm h1 {
-    padding-bottom: 30px;
+.signinForm h1 {
+    padding-bottom: 20px;
     font-size: 40px;
+    font-weight: 500;
+}
+
+.signinForm h3 {
+    padding-bottom: 20px;
+    font-weight: 500;
 }
 
 form {
@@ -38,7 +45,7 @@ form {
     margin-left: 0;
 }
 
-#signup {
+#signin {
     background-color: $bg-color;
     color: $color1;
 }
