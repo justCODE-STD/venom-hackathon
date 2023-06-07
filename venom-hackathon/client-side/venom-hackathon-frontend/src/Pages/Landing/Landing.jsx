@@ -3,6 +3,8 @@ import './Landing.scss'
 import Navbar from '../../Components/Navbar/Navbar'
 import Input from '../../Components/Input/Input'
 import Hero from '../../Components/Hero/Hero'
+import Features from '../../Components/Features/Features'
+import Choose from '../../Components/Choose/Choose'
 
 const Landing = () => {
 
@@ -15,7 +17,8 @@ const Landing = () => {
           <Hero />
       </section>
 
-      
+      <Features />
+      <Choose />
     </div>
   )
 }

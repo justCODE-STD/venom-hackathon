@@ -1,0 +1,43 @@
+@import '../../App.scss';
+
+#features{
+    position: relative;
+    width: $width;
+    padding: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4em;
+
+    .ft-content{
+        position: relative;
+        height: calc($wk-height * 0.15);
+        width: calc($wk-width * 0.2);
+        display: grid;
+        place-items: center;
+        text-align: center;
+        border-radius: $small-radius;
+        padding: 1em;
+
+        h1{
+            font-weight: 400;
+        }
+    }
+
+    #instant{
+        background: $beige;
+    }
+    #fast{
+        background: $lt-blue;
+    }
+    #low{
+        background: $lt-purple;
+    }
+    #customise{
+        background: $lt-blue;
+    }
+    #earn{
+        background: $dl-yellow;
+    }
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "id": "crypto",
+        "image": "/crypto.png",
+        "title": "100+ Cryptocurrencies to accept",
+        "text": "Expand Your Payment Options with over 100+ supported cryptocurrencies"
+    },
+    {
+        "id": "secure",
+        "image": "/secure.png",
+        "title": "Secure Transactions",
+        "text": "Your payments are secured with cutting-edge encryption and blockchain technology."
+    },
+    {
+        "id": "support",
+        "image": "/support.png",
+        "title": "Exceptional Customer Support",
+        "text": "Our dedicated support team are always ready to assist you every step of the way."
+    },
+    {
+        "id": "friendly",
+        "image": "/friendly.png",
+        "title": "User-Friendly Interface",
+        "text": "Effortless payments at your fingertips with our intuitive and user-friendly interface."
+    }
+]
