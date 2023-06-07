@@ -7,6 +7,7 @@ import Features from '../../Components/Features/Features'
 import Choose from '../../Components/Choose/Choose'
 import GetStarted from '../../Components/GetStarted/GetStarted'
 import Testimonials from '../../Components/Testimonials/Testimonials'
+import Partners from '../../Components/Partners/Partners'
 
 const Landing = () => {
 
@@ -23,6 +24,7 @@ const Landing = () => {
       <Choose />
       <GetStarted />
       <Testimonials />
+      <Partners />
     </div>
   )
 }

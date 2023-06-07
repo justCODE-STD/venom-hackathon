@@ -69,6 +69,8 @@ const Testimonials = () => {
             </Swiper>
         </div>
 
+        <span>Swipe to see <i className='fa-solid fa-arrow-right'></i></span>
+
         {/* <div className="target">
             {content.map((items, index) => (
                 <div className={`indicator ${currentSlide === index ? 'active' : ''}`} key={index} />
