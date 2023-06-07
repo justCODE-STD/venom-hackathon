@@ -1,0 +1,21 @@
+@import '../../App.scss';
+
+#gt-started{
+    position: relative;
+    width: $width;
+    background: url(../../assets/worldmap.png) no-repeat right;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 3em 6em;
+
+    h1{
+        font-weight: 700;
+    }
+
+    #gt-str-btn{
+        width: calc($wk-width * 0.13);
+        background: $color5;
+        color: $color6;
+    }
+}

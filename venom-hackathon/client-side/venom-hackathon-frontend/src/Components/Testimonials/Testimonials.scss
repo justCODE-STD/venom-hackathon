@@ -1,0 +1,70 @@
+@import '../../App.scss';
+
+#testimonials{
+    position: relative;
+    width: $width;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+    padding: 3em 6em;
+
+    h1{
+        text-align: right;
+        font-weight: 600;
+    }
+
+    .t-container{
+        position: relative;
+        width: $width;
+        display: flex;
+        // flex-direction: row;
+        overflow: hidden;
+        gap: 3em;
+        cursor: grab;
+
+        .t-content{
+            position: relative;
+            display: flex;
+            width: 100%;
+            gap: 2em;
+            
+            
+            .t-items{
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 2em;
+                background: $color4;
+                padding: 1em;
+                border-radius: $small-radius;
+                margin: 1em;
+
+                span{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    color: $black;
+                    gap: 1em;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    .target{
+        position: relative;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        gap: 2em;
+
+        .indicator{
+            height: calc($wk-height * 0.02);
+            width: calc($wk-width * 0.02);
+            border-radius: $radius;
+            background: $color4;
+        }
+    }
+}

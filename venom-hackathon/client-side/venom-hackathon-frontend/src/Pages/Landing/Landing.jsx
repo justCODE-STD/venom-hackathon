@@ -5,6 +5,8 @@ import Input from '../../Components/Input/Input'
 import Hero from '../../Components/Hero/Hero'
 import Features from '../../Components/Features/Features'
 import Choose from '../../Components/Choose/Choose'
+import GetStarted from '../../Components/GetStarted/GetStarted'
+import Testimonials from '../../Components/Testimonials/Testimonials'
 
 const Landing = () => {
 
@@ -19,6 +21,8 @@ const Landing = () => {
 
       <Features />
       <Choose />
+      <GetStarted />
+      <Testimonials />
     </div>
   )
 }
