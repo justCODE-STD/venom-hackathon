@@ -26,8 +26,8 @@
 }
 
 .signupForm h1 {
-    padding-bottom: 30px;
-    font-size: 45px;
+    padding-bottom: 1.3em;
+    font-size: $large-text;
 }
 
 form {
@@ -50,11 +50,11 @@ form {
     align-items: center;
     color: $color2;
     background: none;
-    gap: 5px;
+    gap: .5em;
 }
 
 form p {
-    margin-top: 10px;
+    margin-top: 0.7em;
     color: $color3;
 }
 

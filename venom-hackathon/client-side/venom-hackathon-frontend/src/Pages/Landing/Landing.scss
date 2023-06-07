@@ -1,5 +1,17 @@
 @import '../../App.scss';
 
 #landing{
+    position: relative;
+    width: $width;
+    overflow-x: hidden;
     
+    section{
+        position: relative;
+        width: $width;
+        background: linear-gradient(
+            135deg,
+            rgba($color5, 1),
+            rgba($color6, 1)
+        );
+    }
 }

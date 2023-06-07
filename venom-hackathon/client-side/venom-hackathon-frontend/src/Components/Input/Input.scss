@@ -3,12 +3,13 @@
 input{
     position: relative;
     width: $width;
-    margin-bottom: 20px;
+    margin-bottom: 1.15em;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 1px solid black;
     padding-bottom: 15px;
+    outline: none;
 }
 
 ::placeholder {
