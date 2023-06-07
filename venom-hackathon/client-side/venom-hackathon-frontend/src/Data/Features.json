@@ -1,0 +1,27 @@
+[
+    {
+        "id": "instant",
+        "title": "Instant Payouts",
+        "icon": "fa-regular fa-money-bill-1 fa-3x"
+    },
+    {
+        "id": "fast",
+        "title": "Fast and Global Transactions",
+        "icon": "fa-solid fa-bolt fa-3x"
+    },
+    {
+        "id": "low",
+        "title": "Low Transactions Fees",
+        "icon": "fa-solid fa-arrow-down-long fa-3x"
+    },
+    {
+        "id": "customise",
+        "title": "Customisable Payment Solutions",
+        "icon": "fa-solid fa-gear fa-3x"
+    },
+    {
+        "id": "earn",
+        "title": "Earn as You Transact",
+        "icon": "fa-solid fa-coins fa-3x"
+    }
+]

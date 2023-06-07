@@ -1,0 +1,71 @@
+@import '../../App.scss';
+
+#hero{
+    position: relative;
+    width: $width;
+    display: flex;
+    align-items: center;
+    padding: 3em;
+    gap: 2em;
+    font-family: $font;
+
+    aside{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        h1{
+            color: $color6;
+            font-size: $extra-large-text;
+        }
+
+        p{
+            font-size: calc($text * 1.5);
+        }
+
+        span{
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            #hr-sign, #hr-learn{
+                width: calc($wk-width * 0.15);
+            }
+
+            #hr-sign{
+                background: $color5;
+                color: $color6;
+            }
+
+            #hr-learn{
+                border: 0.02em solid $black;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #hero{
+
+        aside{
+            width: 100%;
+
+            h1{
+                font-size: calc($text * 2.5);
+            }
+        }
+
+        span{
+            flex-wrap: wrap;
+            #hr-sign, #hr-learn{
+                width: calc($wk-width * 0.1);
+            }
+        }
+        
+        img{
+            display: none;
+        }
+    }
+}

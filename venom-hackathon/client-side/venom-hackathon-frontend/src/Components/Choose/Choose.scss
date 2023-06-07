@@ -1,0 +1,78 @@
+@import '../../App.scss';
+
+#choose{
+    position: relative;
+    width: $width;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6em;
+
+    #ch-h1{
+        word-spacing: .3em;
+    }
+
+    span{
+        position: relative;
+        width: $width;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6em;
+        color: $black;
+
+        .ch-content{
+            position: relative;
+            height: calc($wk-height * 0.3);
+            width: calc($wk-width * 0.25);
+            border-radius: $small-radius;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 2em;
+            padding: 2em;
+            font-weight: 500;
+
+            img{
+                position: absolute;
+                top: -15%;
+                left: 30%;
+                width: calc($wk-width * 0.1);
+            }
+        }
+
+        #crypto{
+            border: 0.02em solid $color4;
+        }
+        #secure{
+            border: 0.02em solid $color4;
+        }
+        #support{
+            border: 0.02em solid $lt-blue;
+        }
+        #friendly{
+            border: 0.02em solid $bg-color;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #choose{
+        text-align: center;
+        span{
+            
+
+            .ch-content{
+                img{
+                    left: 25%;
+                    width: calc($wk-width * 0.08);
+                }
+            }
+        }
+    }
+}

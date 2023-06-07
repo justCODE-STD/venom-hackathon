@@ -1,0 +1,50 @@
+@import '../../App.scss';
+
+#partners{
+    position: relative;
+    width: $width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    gap: 5em;
+
+    #pt-top{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 4em;
+        text-align: center;
+    }
+
+    #pt-bottom{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 4em;
+        flex-wrap: wrap;
+        border-top: 0.02em solid $color3;
+        padding: 3em 0;
+
+        p{
+            font-size: calc($text * 1.4);
+        }
+
+        span{
+            position: relative;
+            width: calc($wk-width * 0.25);
+
+            input{
+                border: 0.02em solid $black;
+                font-family: $font;
+                font-size: $text;
+                padding: 1.2em;
+            }
+        }
+    }
+}
