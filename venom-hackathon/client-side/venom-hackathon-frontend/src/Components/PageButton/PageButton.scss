@@ -1,0 +1,17 @@
+@import '../../App.scss';
+
+.pagebutton{
+    // width: $width;
+    margin-top: .2em;
+    padding: 1em; 
+    border: 0.02em solid $bg-color;
+    outline: none;
+    font-size: $text;
+    font-weight: 500;
+    font-family: $font;
+    background: none;
+    border: none;
+    // border-radius: $small-radius;
+    cursor: pointer;
+}
+

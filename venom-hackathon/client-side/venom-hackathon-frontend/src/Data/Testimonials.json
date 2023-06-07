@@ -1,0 +1,48 @@
+[
+    {
+        "one":[
+            {
+                "title": "A Game-Changer for My Business",
+                "text": "The seamless integration and user-friendly interface allowed me to start accepting cryptocurrencies as payments effortlessly.",
+                "name" : "Helen",
+                "image": "/user1.png"
+            },
+            {
+                "title": "The Best decision I made for My Business",
+                "name" : "Liam",
+                "text": "The low transaction fees compared to traditional payment methods have significantly reduced my costs.",
+                "image": "/user2.png"
+            }
+        ],
+
+        "two":[
+            {
+                "title": "Streamlined Payments",
+                "text": "I was hesitant to accept cryptocurrencies as payment at first, but the seamless integration provided by this platform made it incredibly easy.",
+                "name" : "Ulyssa",
+                "image": "/user1.png"
+            },
+            {
+                "title": "New Opportunities",
+                "text": "Thanks to the seamless integration and user-friendly interface, I was able to seamlessly integrate cryptocurrency payments into my business.",
+                "name" : "George",
+                "image": "/user2.png"
+            }
+        ],
+
+        "three":[
+            {
+                "title": "Expanding Payment Options",
+                "text": "The seamless integration and user-friendly interface have transformed the way I handle payments.",
+                "name" : "Natalia",
+                "image": "/user1.png"
+            },
+            {
+                "title": "Hassle-Free Cryptocurrency Payments",
+                "text": "I was looking for a solution to accept cryptocurrencies, and this platform exceeded my expectations.",
+                "name": "Maxim",
+                "image": "/user2.png"
+            }
+        ]
+    }
+]

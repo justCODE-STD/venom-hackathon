@@ -1,0 +1,50 @@
+@import url('https://fonts.cdnfonts.com/css/space-grotesk');
+
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+$black: #0e0e0e;
+$bg-color: #663399;
+$color1: #fefefe;
+$color2: #5A5B5B;
+$color3: #959595;
+$color4:  #B0BEC5;
+$color5: #114265;
+$color6: #EEFCFF;
+$beige: #FEE296;
+$lt-blue: #BBE9F4;
+$dl-yellow: #ECFB94;
+$lt-purple: #E3C7FF;
+
+$height: 100vh;
+$width: 100%;
+$wk-height: 100em;
+$wk-width: 100em;
+$radius: 50%;
+$small-radius: 0.5em;
+$text: 1em;
+$large-text: 3em;
+$extra-large-text: 4em;
+$font: 'Space Grotesk', sans-serif;
+
+
+@mixin flex-row-nav(){
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin flex-column(){
+  display: flex;
+  flex-direction: column;
+}
+
+.App{
+  font-family: $font;
+}
