@@ -68,3 +68,16 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    #testimonials{
+        padding: 3em .5em;
+        .t-container{
+            padding: 0;
+            .t-content{
+                flex-wrap: wrap;
+                gap: 1em;
+            }
+        }
+    }
+}

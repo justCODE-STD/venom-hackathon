@@ -8,6 +8,7 @@ import Choose from '../../Components/Choose/Choose'
 import GetStarted from '../../Components/GetStarted/GetStarted'
 import Testimonials from '../../Components/Testimonials/Testimonials'
 import Partners from '../../Components/Partners/Partners'
+import Footer from '../../Components/Footer/Footer'
 
 const Landing = () => {
 
@@ -25,6 +26,7 @@ const Landing = () => {
       <GetStarted />
       <Testimonials />
       <Partners />
+      <Footer />
     </div>
   )
 }

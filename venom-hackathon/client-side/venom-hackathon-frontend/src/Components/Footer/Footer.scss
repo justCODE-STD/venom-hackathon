@@ -1,0 +1,39 @@
+@import '../../App.scss';
+
+footer{
+    position: relative;
+    width: $width;
+    padding: 3em;
+    background: $color5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    nav{
+        position: relative;
+        // width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: $color1;
+        align-items: flex-start;
+
+        h1{
+            // font-size:text;
+        }
+
+        #ft-btn{
+            color: $color6;
+            padding: 0;
+            margin: 1em 0;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer{
+        nav{
+            width: 100%;
+        }
+    }
+}

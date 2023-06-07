@@ -69,7 +69,7 @@ const Testimonials = () => {
             </Swiper>
         </div>
 
-        <span>Swipe to see <i className='fa-solid fa-arrow-right'></i></span>
+        <span>Swipe to see more <i className='fa-solid fa-arrow-right'></i></span>
 
         {/* <div className="target">
             {content.map((items, index) => (

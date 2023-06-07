@@ -45,3 +45,27 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    #hero{
+
+        aside{
+            width: 100%;
+
+            h1{
+                font-size: calc($text * 2.5);
+            }
+        }
+
+        span{
+            flex-wrap: wrap;
+            #hr-sign, #hr-learn{
+                width: calc($wk-width * 0.1);
+            }
+        }
+        
+        img{
+            display: none;
+        }
+    }
+}

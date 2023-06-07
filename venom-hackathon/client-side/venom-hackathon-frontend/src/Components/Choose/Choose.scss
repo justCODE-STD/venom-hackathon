@@ -60,3 +60,19 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    #choose{
+        text-align: center;
+        span{
+            
+
+            .ch-content{
+                img{
+                    left: 25%;
+                    width: calc($wk-width * 0.08);
+                }
+            }
+        }
+    }
+}
