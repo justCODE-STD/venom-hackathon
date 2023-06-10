@@ -1,0 +1,135 @@
+pragma ever-solidity >= 0.61.2;
+pragma AbiHeader expire;
+pragma AbiHeader pubkey;
+
+contract VenomPay{
+    address static owner;
+    address static _taxAddress;
+    uint256 tax;
+    uint constant Business_already_registered = 200;
+
+    constructor(address _tax) public{
+        tvm.accept();
+        tvm.rawReserve(1 ever, 0);
+        owner = msg.sender;
+        tax = _tax;
+    }
+
+    enum PaymentStatus {Pending, Confirmed, Refunded, Canceled};
+    event BusinessRegistered(address indexed registered, string businessName, string newOwner);
+    event PaymentTx(string businessName, address indexed businessAddress, address indexed customer, uint256 amount, string details, uint256 txId);
+
+    struct Business {
+        string businessOwner;
+        string businessName;
+        address businessAddress;
+    }
+
+    struct Payment {
+        uint256 txId;
+        address customer;
+        uint256 amount;
+        string detail;
+        PaymentStatus status;
+    }
+
+    struct Transaction {
+        uint txId;
+        string businessName;
+        address businessAddress;
+        uint256 txCount;
+        Payme[] payments; 
+    }
+
+    uint private businessCount;
+    uint private myTrxCount;
+    uint private allTrxCount;
+    Business[] public businesses;
+    Transaction[] public transactions;
+    mapping(address => Business )public business;
+    mapping(address => Transaction)public transaction;
+    mapping(address => Payment) payments;
+    mapping(address => bool) isBusiness;
+
+    function registerBusiness(string _owner, string  _businessName) external{
+        tvm.accept();
+        require(!isBusiness[msg.sender], 200);
+        
+        Business newBusiness;
+        business[msg.sender].businessOwner = _owner;
+        business[msg.sender].businessName = _businessName;
+        business[msg.sender].businessAddress = msg.sender;
+
+        newBusiness = business[msg.sender];
+        businesses.push(newBusiness);
+        isBusiness[msg.sender] = true;
+        businessCount += 1;
+        addTransaction(msg.sender, _businessName);
+ 
+        emit BusinessRegistered(msg.sender, _businessName, _owner);
+
+    }
+
+    function addTransaction(address _businessAddress, string _businessName) internal {
+    Transaction trx;
+    trx.txId = transactions.length;
+    trx.businessName = _businessName;
+    trx.businessAddress = _businessAddress;
+    trx.txCount = 0;
+    transaction[_businessAddress] = trx;
+    }
+
+    function calcTax(uint256 amount)internal{
+        require(amount > 0, 'Invalid Amount');
+        if(amount <= 10){
+            tax = 1;
+        }else if(amount > 10 && amount < 1000){
+            tax = amount / 100;
+        }else {
+            tax = 10;
+        }
+    }
+
+    function makePayment(address _businessAddress, uint256 _amount, string _detail) public payable {
+        tvm.accept();
+
+        require(registeredBusiness[_businessAddress].businessAddress != address(0), 'Business not registered!');
+        require(msg.value > 0, 'Invalid Amount!');
+        msg.value = _amount;
+        
+        Transaction storage trx = transaction[_businessAddress];
+        Payment storage payment = trx.payments[msg.sender];
+        payment.txId = trx.txCount+1;
+        payment.customer = msg.sender;
+        payment.amount = _amount;
+        payment.detail = _detail;
+
+        calcTax(_amount);
+
+        (bool success, ) = _businessAddress.call{value: _amount - tax, _detail}("");
+        (bool paidTax, ) = taxAddress.call{value: tax}("");
+        
+        if (success) {
+            payment.status = PaymentStatus.Confirmed;
+        } else {
+            payment.status = PaymentStatus.Pending;
+        }        
+        
+        require(success, 'Payment failed!');
+        require(paidTax, 'Tax payment failed!');
+
+        transactions.push(trx);
+
+        emit PaymentTx(registeredBusiness[_businessAddress].businessName, _businessAddress, msg.sender, _amount, _detail, payment.txId);
+    }
+
+    function getBusiness(address _business) external view returns(Business memory){
+        return registeredBusiness[_business];
+    }
+
+
+    function getAllBusiness()external view returns(Business[] memory){
+        return businesses;
+    }
+
+}
