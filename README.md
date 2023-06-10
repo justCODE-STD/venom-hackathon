@@ -1,7 +1,7 @@
 
-  <h1>VenomPay</h1>
+  <h1>Venom Pay</h1>
 
-  <p>VenomPay is a cutting-edge payment solution that empowers businesses to offer faster and more convenient payment options using cryptocurrency. With VenomPay, you can provide your customers with a seamless payment experience, allowing them to transact effortlessly and securely.</p>
+  <p>Venom Pay is a cutting-edge payment solution that empowers businesses to offer faster and more convenient payment options using cryptocurrency. With VenomPay, you can provide your customers with a seamless payment experience, allowing them to transact effortlessly and securely.</p>
 
   <h2>Features</h2>
 
@@ -29,6 +29,6 @@
 
   <h2>Feedback</h2>
 
-  <p>We value your feedback! If you have any suggestions or ideas to improve VenomPay, please don't hesitate to reach out to us. We appreciate your input as we continuously strive to enhance our services.</p>
+  <p>We value your feedback! If you have any suggestions or ideas to improve Venom Pay, please don't hesitate to reach out to us. We appreciate your input as we continuously strive to enhance our services.</p>
 
   <p>Thank you for choosing VenomPay! We are excited to partner with you in revolutionizing the way payments are made with cryptocurrency.</p>
