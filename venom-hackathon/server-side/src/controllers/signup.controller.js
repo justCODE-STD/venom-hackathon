@@ -1,11 +1,8 @@
 // Importing the model
-const UserModel = require('../models/User.model.js');
-
-// Loading database
-require('../config/dbconfig.js')();
+const User = require('../models/user.model');
 
 // Verification List
-const { VerificationList } = require('../cache.js')
+const { VerificationList } = require('../../cache.js')
 
 // Email Sender
 const { Mail } = require('../config/emailsender.js')
@@ -13,9 +10,9 @@ const { Mail } = require('../config/emailsender.js')
 // Creating th Controller class
 class UserSignUpControls {
     async SignUp (req, res) {
-        const { username, password, email } = req.body
+        const { password, email } = req.body
         try {
-            const ExistingUser = await UserModel.findOne({ email: email })
+            const ExistingUser = await User.findOne({ email: email })
             if (!ExistingUser) {
                 return res.status(400).json({
                     message: "This User already exists. Please try again"
@@ -24,7 +21,6 @@ class UserSignUpControls {
             else {
                 const code = require('nanoid')(6)
                 VerificationList.push({
-                    username: username,
                     password: password,
                     email: email,
                     code: code,
@@ -64,8 +60,7 @@ class UserSignUpControls {
                     message: "Code has expired"
                 })
             }
-            await UserModel.create({
-                username: UserDetails.username,
+            await User.create({
                 password: UserDetails.password,
                 email: UserDetails.email
             })

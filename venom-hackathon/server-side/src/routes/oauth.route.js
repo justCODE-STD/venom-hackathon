@@ -10,20 +10,37 @@ router.get('/login', (req, res) => {
 
 // auth withh google
 router.get('/google', passport.authenticate('google', {
-    scope: ['profile']
+    scope: ['email','profile']
 }));
 
 
 // callback route for google to redirect to; redirect/callback url
 router.get('/google/redirect',
-    passport.authenticate('google'), (req, res) => {
-        res.send('You have gone through google passport')
+    passport.authenticate('google'), {
+        successRedirect: '/protected',
+        failureRedirect: '/auth/failure',
     })
 
-// auth logout
+// Handle google auth failure
+router.get('/auth/failure', (req, res) => {
+    res.send('something went wrong');
+});
+
+// Handle google auth success
+router.get('/protected', isLoggedIn, (req, res) => {
+    const name = req.user.displayName;
+    res.send(`Hello! ${name}`);
+});
+
+// Auth logout
 router.get('/logout', (req, res) => {
-    // handle with passport
-    res.send('Logging out with passport')
+
+    const cookies = Object.keys(req.cookies)
+    cookies.forEach((cookie) => {
+        res.clearCookie(cookie)
+    })
+    res.redirect('/')
+
 })
 
 

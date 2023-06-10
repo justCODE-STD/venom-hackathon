@@ -17,15 +17,22 @@ passport.use(
         User.findOne({ googleId: profile.id }).then((currentUser) => {
             if (currentUser) {
                 // Already have the user
-                console.log('user is: ' + currentUser)
-
+                return res.status(201).json({
+                    message: 'Logged in successfully',
+                    data: currentUser
+                })
             } else {
                 // create new user
                 new User({
-                    username: profile.displayName,
+                    email: profile._json.email,
+                    password: 'password',
+                    
                     googleId: profile.id
                 }).save().then((newUser) => {
-                    console.log('new user created: ' + newUser)
+                    return res.status(201).json({
+                        message: 'Created successfully',
+                        data: newUser
+                    })
                 })
             }
         })
