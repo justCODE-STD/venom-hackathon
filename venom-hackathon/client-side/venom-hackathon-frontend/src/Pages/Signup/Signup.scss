@@ -6,6 +6,10 @@
     justify-content: space-between;
     height: 100vh;
     overflow: hidden;
+
+    @media (max-width: 600px) {
+        display: block;
+    }
 }
 
 .signupImg {
@@ -13,6 +17,14 @@
     width: 100%;
     flex: 1;
     object-fit: cover;
+
+    @media (max-width: 600px) {
+        display: none;
+    }  
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
 }
 
 .signupForm {
@@ -23,11 +35,24 @@
     justify-content: center;
     margin: 80px;
     width: 100%;
+
+    @media (max-width: 600px)  {
+        margin: 50px 50px 0 0;
+        padding: 20px;
+        width: 100%;
+    }
 }
 
 .signupForm h1 {
     padding-bottom: 1.3em;
     font-size: $large-text;
+
+    
+    @media (max-width: 600px) {
+        font-size: 30px;
+        text-align: center;
+        top: 0;
+    }
 }
 
 form {
@@ -41,6 +66,19 @@ form {
 #signup {
     background-color: $bg-color;
     color: $color1;
+    width: 100%;
+    border-radius: 10px;
+
+    :hover {
+        background-color: $lt-blue;
+        color: $bg-color; 
+    }
+
+    @media (max-width: 600px) {
+        width: 100%;
+        border-radius: 10px;
+        font-size: 12px;
+    }
 }
 
 #google {
@@ -51,14 +89,26 @@ form {
     color: $color2;
     background: none;
     gap: .5em;
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
 }
 
 form p {
     margin-top: 0.7em;
     color: $color3;
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
 }
 
 span {
     color: $bg-color;
     font-weight: bold;
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
 }
