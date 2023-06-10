@@ -1,5 +1,3 @@
-// Load ENV Variables
-require('dotenv').config()
 
 // Importing the email sender module
 const nodemailer = require('nodemailer');
