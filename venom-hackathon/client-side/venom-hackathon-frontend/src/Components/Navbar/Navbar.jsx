@@ -18,7 +18,7 @@ const Navbar = () => {
 
         <span>
           <PageButton title={"Sign Up"} link={'/signup'} id={'sgu-btn'}/>
-          <PageButton title={"Sign In"} link={'/login'}/>
+          <PageButton title={"Sign In"} link={'/signin'}/>
         </span>
     </div>
   )
