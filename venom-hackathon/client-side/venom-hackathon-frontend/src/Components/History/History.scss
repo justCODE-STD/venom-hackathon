@@ -1,0 +1,56 @@
+@import "../../App.scss";
+
+.history-container {
+    margin-top: 5rem;
+    padding: 0 10rem;
+}
+.text-container {
+    display: flex;
+    justify-content: space-between;
+}
+.historyCard-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem; 
+    border-radius: 1rem;
+    border: 1px solid $color5;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+.img-container{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.imgContainer-text h4, .amount-container h4{
+    font-size: 1.5rem;
+}
+.imgContainer-text p, .amount-container p{
+    font-size: 0.8rem;
+}
+.amount-container{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+.historyImage{
+    width: 50px;
+}
+@media screen and (max-width: 768px){
+    .history-container{
+        padding: 0 1rem;
+    }
+    .historyCard-container{
+        padding: 1rem;
+    }
+    .img-container{
+        gap: 1rem;
+    }
+    .imgContainer-text h4, .amount-container h4{
+        font-size: 1rem;
+    }
+    .imgContainer-text p, .amount-container p{
+        font-size: 0.7rem;
+    }
+}

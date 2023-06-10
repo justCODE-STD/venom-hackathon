@@ -3,6 +3,7 @@ import './App.scss'
 import Landing from './Pages/Landing/Landing'
 import Signin from './Pages/Signin/Signin'
 import Signup from './Pages/Signup/Signup'
+import Dashboard from "./Pages/Dashboard/Dashboard"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path='/' element={<Landing />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/signup' element={<Signup />} />
+          <Route path='/dashboard' element={<Dashboard />} />
         </Routes>
       </Router>
     </div>

@@ -1,0 +1,42 @@
+.balance{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+}
+.balance-div h1{
+    font-size: 3rem;
+    margin-top: 8px;
+}
+.balance-div h4{
+    font-size: 1.3rem;
+    margin-top: 8px;
+    font-weight: 500;
+}
+.eye {
+    width: 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.menu-img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .balance{
+        padding: 0 1rem;
+    }
+    .balance-div h1{
+        font-size: 1.5rem;
+    }
+    .eye {
+        margin-bottom: 1px;
+        width: 15px;
+    }
+    .menu-img{
+        margin-right: 0;
+    }
+}
