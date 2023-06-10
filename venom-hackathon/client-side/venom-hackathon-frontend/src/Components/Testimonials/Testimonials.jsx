@@ -6,16 +6,16 @@ import 'swiper/css';
 import content from '../../Data/Testimonials.json'
 
 const Testimonials = () => {
-    // const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(0);
 
-    // const handleSlideChange = (swiper) => {
-    //   setCurrentSlide(swiper.activeIndex);
-    // };
+    const handleSlideChange = (swiper) => {
+       setCurrentSlide(swiper.activeIndex);
+     };
   
-    // useEffect(() => {
-    //   const swiperInstance = document.querySelector('.swiper-container').swiper;
-    //   swiperInstance.on('slideChange', handleSlideChange);
-    // }, []);
+    useEffect(() => {
+       const swiperInstance = document.querySelector('.swiper-container').swiper;
+       swiperInstance.on('slideChange', handleSlideChange);
+     }, []);
 
   return (
     <div id='testimonials'>
@@ -71,11 +71,11 @@ const Testimonials = () => {
 
         <span>Swipe to see more <i className='fa-solid fa-arrow-right'></i></span>
 
-        {/* <div className="target">
+         <div className="target">
             {content.map((items, index) => (
                 <div className={`indicator ${currentSlide === index ? 'active' : ''}`} key={index} />
             ))}
-        </div> */}
+        </div> 
     </div>
   )
 }

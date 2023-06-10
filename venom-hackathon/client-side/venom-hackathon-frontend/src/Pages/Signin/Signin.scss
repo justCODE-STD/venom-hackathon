@@ -7,6 +7,10 @@
     align-items: center;
     height: 100vh;
     overflow: hidden;
+
+    @media (max-width: 600px) {
+        display: block;
+    }
 }
 
 .signinImg {
@@ -14,6 +18,14 @@
     width: 100%;
     flex: 1;
     object-fit: cover;
+
+    @media (max-width: 600px) {
+        display: none;
+    }  
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
 }
 
 .signinForm {
@@ -24,17 +36,34 @@
     justify-content: center;
     margin: 80px;
     width: 100%;
+
+    @media (max-width: 600px)  {
+        margin: 0 10px;
+        padding: 20px;
+        width: 100%;
+    }
+
 }
 
 .signinForm h1 {
     padding-bottom: 20px;
     font-size: 40px;
     font-weight: 500;
+
+    @media (max-width: 600px) {
+        font-size: 30px;
+        text-align: center;
+        top: 0;
+    }
 }
 
 .signinForm h3 {
     padding-bottom: 20px;
     font-weight: 500;
+
+    @media (max-width: 600px) {
+        font-size: 16px;
+    }
 }
 
 form {
@@ -48,6 +77,19 @@ form {
 #signin {
     background-color: $bg-color;
     color: $color1;
+    width: 100%;
+    border-radius: 10px;
+
+    :hover {
+        background-color: $lt-blue;
+        color: $bg-color; 
+    }
+
+    @media (max-width: 600px) {
+        width: 100%;
+        border-radius: 10px;
+        font-size: 12px;
+    }
 }
 
 #google {
@@ -58,14 +100,28 @@ form {
     color: $color2;
     background: none;
     gap: 5px;
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
 }
 
 form p {
     margin-top: 10px;
     color: $color3;
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
+
 }
 
 span {
     color: $bg-color;
     font-weight: bold;
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
 }
+
